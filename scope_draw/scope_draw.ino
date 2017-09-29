@@ -1,24 +1,37 @@
 #include "seattle.h"
 #include "square.h"
+#include "reid.h"
 #include <math.h>
+
+#define DAC_RES 4096
 
 void setup() {
   analogWriteResolution(12);
 }
 
 void loop() {
+  static int theta = 0;
+
+  draw_screen_bounds();
+  render_scene(theta, reid__x_coords, reid__y_coords, reid__num_points);
+
+  theta += 3;
+  theta %= 360;
+
+  //delay(10);
+}
+
+void render_scene(int theta, uint16_t* x_coords, uint16_t* y_coords, int num_points) {
   static int lx = 0;
   static int ly = 0;
-  static int theta = 0;
   double xmod = cos(theta * 3.14 / 180.0);
   double zmod = sin(theta * 3.14 / 180.0);
-  draw_screen_bounds();
 
-  for (int i = 0; i < seattle__num_points; i++) {
+  for (int i = 0; i < num_points; i++) {
 
     // center over origin
-    int x = seattle__x_coords[i] - 2048;
-    int y = seattle__y_coords[i] - 2048;
+    int x = x_coords[i] - (DAC_RES / 2);
+    int y = y_coords[i] - (DAC_RES / 2);
 
 
     /* we rotate around z axis giving us a modulated x
@@ -28,30 +41,26 @@ void loop() {
     int z = x * zmod;
     x *= xmod;
 
-    int f = 4096/3;
+    int f = DAC_RES/2;
 
     /* dist from camera */
-    int z_dist = f + (f) - z;
+    int z_dist = 2*f - z;
 
     int px = (float)x * f / z_dist;
     int py = (float)y * f / z_dist;
 
-    px += 2048;
-    py += 2048;
+    px += (DAC_RES / 2);
+    py += (DAC_RES / 2);
 
     ramp(lx, ly, px, py);
 
     lx = px;
     ly = py;
   }
-
-  theta += 3;
-  theta %= 360;
-  delay(10);
 }
 
 void draw_screen_bounds() {
-  int r = 4095;
+  int r = DAC_RES - 1;
   ramp(0, 0, 0, r);
   ramp(0, r, r, r);
   ramp(r, r, r, 0);
@@ -67,6 +76,15 @@ void draw_screen_bounds() {
 void ramp(int sx, int sy, int ex, int ey) {
 
   static int step_size = 30;
+
+  if (out(sx) and out(sy) and out(ex) and out(ey)) {
+    return;
+  }
+
+  sx = limit(sx);
+  sy = limit(sy);
+  ex = limit(ex);
+  ey = limit(ey);
 
   int dx = ex - sx;
   int dy = ey - sy;
@@ -88,8 +106,20 @@ void ramp(int sx, int sy, int ex, int ey) {
 }
 
 
+bool out(int val) {
+  if (val < 0) return true;
+  else if (val >= DAC_RES) return true;
+  return false;
+}
+
+int limit(int val) {
+  if (val < 0) val = 0;
+  else if (val >= DAC_RES) val = DAC_RES - 1;
+  return val;
+}
+
 void write_dac(int dac, int val) {
   if (val < 0) val = 0;
-  else if (val >= 4096) val = 4095;
+  else if (val >= DAC_RES) val = DAC_RES - 1;
   analogWrite(dac, val);
 }

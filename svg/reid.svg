@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="793.70081"
+   height="1122.5197"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg4442"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   sodipodi:docname="reid.svg">
+  <defs
+     id="defs4436" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.4006329"
+     inkscape:cx="300.46642"
+     inkscape:cy="692.85714"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:pagecheckerboard="true"
+     inkscape:window-width="2556"
+     inkscape:window-height="1396"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4439">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       aria-label="REID"
+       transform="scale(0.26458333)"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       id="flowRoot4444">
+      <path
+         d="M 229.64062 371.60742 L 229.64062 400.76758 L 233.58594 400.76758 L 233.58594 388.44336 L 237.88281 388.44336 L 241.57422 389.40039 L 244.38672 393.28711 L 248.11719 400.76758 L 252.35547 400.76758 L 248.35156 392.79883 L 245.92969 388.93164 L 243.46875 387.0957 L 247.17969 384.57617 L 248.46875 380.00586 L 246.00781 373.69727 L 238.54688 371.60742 L 229.64062 371.60742 z M 257.45312 371.60742 L 257.45312 400.76758 L 276.24219 400.76758 L 276.24219 397.44727 L 261.39844 397.44727 L 261.39844 386.88086 L 275.28516 386.88086 L 275.28516 383.56055 L 261.39844 383.56055 L 261.39844 374.92773 L 275.89062 374.92773 L 275.89062 371.60742 L 257.45312 371.60742 z M 282.76562 371.60742 L 282.76562 400.76758 L 286.71094 400.76758 L 286.71094 371.60742 L 282.76562 371.60742 z M 294.5625 371.60742 L 294.5625 400.76758 L 302.66797 400.76758 L 315.08984 397.23242 L 319.07422 386.1582 L 315.10938 375.14258 L 302.66797 371.60742 L 294.5625 371.60742 z M 233.58594 374.84961 L 238.54688 374.84961 L 242.84375 376.1582 L 244.30859 380.00586 L 242.84375 383.89258 L 238.54688 385.20117 L 233.58594 385.20117 L 233.58594 374.84961 z M 298.50781 374.84961 L 303.27344 374.84961 L 312.10156 377.58398 L 314.91406 386.1582 L 312.10156 394.79102 L 303.27344 397.52539 L 298.50781 397.52539 L 298.50781 374.84961 z "
+         id="path4452" />
+    </g>
+  </g>
+</svg>

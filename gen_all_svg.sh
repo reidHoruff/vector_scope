@@ -13,4 +13,7 @@ python svg_to_arr.py --svg=svg/square.svg --resolution=2048 --x=1024 --y=1024 --
 # generates at regular 4096 resolution
 python svg_to_arr.py --svg=svg/seattle.svg --resolution=4096 --prefix=seattle --code > $out/seattle.h
 
+# generates REID text
+python svg_to_arr.py --svg=svg/reid.svg --resolution=4096 --prefix=reid --code > $out/reid.h
+
 cat $out/*.h
